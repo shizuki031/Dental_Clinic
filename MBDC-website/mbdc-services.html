@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBDC | Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #63c5b5, #8fe3d1);
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      margin: 0 20px;
+      color: #003333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007777;
+      font-weight: 700;
+    }
+
+    nav a.active {
+      color: #007777;
+      font-weight: 700;
+      border-bottom: 3px solid #007777;
+      padding-bottom: 5px;
+    }
+
+    .services-hero {
+      text-align: center;
+      padding: 100px 40px 60px 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      max-width: 1000px;
+      margin: 60px auto 0 auto;
+    }
+
+    .services-hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .services-hero p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #e9f9f6;
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      color: #004d40;
+      width: 260px;
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin: 15px 0;
+      font-weight: 600;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #007777;
+      margin-bottom: 20px;
+    }
+
+    .service-details {
+      display: none;
+      max-width: 900px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 50px 40px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .service-details.active {
+      display: block;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .service-details h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .service-details p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .book-section {
+      background: white;
+      text-align: center;
+      padding: 80px 60px;
+      color: #004d40;
+      border-top: 4px solid #63c5b5;
+    }
+
+    .book-section h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .book-section p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .book-section a {
+      background: #63c5b5;
+      color: white;
+      text-decoration: none;
+      padding: 15px 40px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .book-section a:hover {
+      background: #4db09d;
+    }
+
+    footer {
+      background: white;
+      color: #004d40;
+      text-align: center;
+      padding: 20px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 900px) {
+      .services-hero {
+        padding: 80px 20px;
+      }
+      .service-cards {
+        padding: 40px 20px;
+      }
+      .card {
+        width: 90%;
+      }
+      .service-details {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="C:\Users\Huawei\Desktop\MBDC-website\MBDC-img\567109974_803144525765044_6374214941096286764_n-removebg-preview.png" alt="MBDC Logo">
+    <nav>
+      <a href="C:\Users\Huawei\Desktop\MBDC-website\mbdc.html">HOME</a>
+      <a href="C:\Users\Huawei\Desktop\MBDC-website\mbdc-about.html">ABOUT</a>
+      <a href="C:\Users\Huawei\Desktop\MBDC-website\mbdc-services.html" class="active">SERVICES</a>
+      <a href="C:\Users\Huawei\Desktop\MBDC-website\mbdc-appointments.html">APPOINTMENT</a>
+      <a href="C:\Users\Huawei\Desktop\MBDC-website\mbdc-faqs.html">FAQS</a>
+      <a href="C:\Users\Huawei\Desktop\MBDC-website\mbdc-contact.html">CONTACT US</a>
+    </nav>
+  </header>
+
+  <div class="services-hero">
+    <h1>Our Dental Services</h1>
+    <p>We provide affordable and quality dental care with a compassionate approach. Explore our available services below.</p>
+  </div>
+
+  <div class="service-cards">
+    <div class="card" onclick="showService('cleaning')">
+      <img src="C:\Users\Huawei\Desktop\html\try1\MBDC-website\MBDC-img\cleaning.jpg" alt="Cleaning">
+      <h3>Teeth Cleaning</h3>
+      <p>Click to learn more</p>
+    </div>
+
+    <div class="card" onclick="showService('extraction')">
+      <img src="C:\Users\Huawei\Desktop\html\try1\MBDC-website\MBDC-img\extraction.jpg" alt="Extraction">
+      <h3>Tooth Extraction</h3>
+      <p>Click to learn more</p>
+    </div>
+
+    <div class="card" onclick="showService('consultation')">
+      <img src="C:\Users\Huawei\Desktop\html\try1\MBDC-website\MBDC-img\consultation.jpg" alt="Consultation">
+      <h3>Dental Consultation</h3>
+      <p>Click to learn more</p>
+    </div>
+
+    <div class="card" onclick="showService('braces')">
+      <img src="C:\Users\Huawei\Desktop\html\try1\MBDC-website\MBDC-img\braces.jpg" alt="Braces Adjustment">
+      <h3>Braces Adjustment</h3>
+      <p>Click to learn more</p>
+    </div>
+  </div>
+
+  <div id="cleaning" class="service-details">
+    <h2>Teeth Cleaning</h2>
+    <p>Our cleaning service removes plaque, tartar, and stains to ensure your smile stays bright and healthy. Regular cleaning prevents gum disease and tooth decay — recommended every 6 months.</p>
+  </div>
+
+  <div id="extraction" class="service-details">
+    <h2>Tooth Extraction</h2>
+    <p>We ensure safe and gentle removal of damaged or decayed teeth. Our dentist ensures minimal discomfort and proper aftercare to help you recover quickly.</p>
+  </div>
+
+  <div id="consultation" class="service-details">
+    <h2>Dental Consultation</h2>
+    <p>Discuss your dental concerns and treatment options with our experienced dentist. We help you find the best solution to keep your oral health in top shape.</p>
+  </div>
+
+  <div id="braces" class="service-details">
+    <h2>Braces Adjustment</h2>
+    <p>Regular braces adjustments ensure your treatment stays on track. We provide comfortable adjustments with gentle care, helping you achieve that perfect smile.</p>
+  </div>
+
+  <div class="book-section">
+    <h2>Ready to Book an Appointment?</h2>
+    <p>Click below to schedule your next dental visit with MBDC.</p>
+    <a href="C:\Users\Huawei\Desktop\MBDC-website\mbdc-appointments.html">Book Appointment</a>
+  </div>
+
+  <footer>
+    © 2025 Maglinao-Banca Dental Clinic. All Rights Reserved.
+  </footer>
+
+  <script>
+    function showService(id) {
+      document.querySelectorAll('.service-details').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({
+        top: document.getElementById(id).offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+</body>
+</html>
